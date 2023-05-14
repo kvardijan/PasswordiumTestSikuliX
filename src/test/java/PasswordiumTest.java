@@ -265,7 +265,7 @@ public class PasswordiumTest {
         Assert.assertTrue(postoji);
     }
     @Test
-    public void testNatragNaPrijavu() throws FindFailed{
+    public void testBackToLogin() throws FindFailed{
         screen.wait("images/txtNisteReg.png", 10);
         screen.click("images/txtNisteReg.png");
         Pattern natrag = new Pattern("images/btnNatragNaPrijavu.png");
@@ -275,7 +275,7 @@ public class PasswordiumTest {
         Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
     }
     @Test
-    public void testNatragNaPrikaz() throws FindFailed{
+    public void testBackToAccountList() throws FindFailed{
         screen.wait("images/txtBox.png", 10);
         screen.click("images/txtBox.png");
         screen.type("karlokorisnik" + Key.ENTER);
@@ -288,6 +288,49 @@ public class PasswordiumTest {
         screen.wait("images/NatragNaPrikaz.png", 10);
         screen.click("images/NatragNaPrikaz.png");
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
+    }
+    @Test
+    public void testAccountNotSelected() throws FindFailed{
+        screen.wait("images/txtBox.png", 10);
+        screen.click("images/txtBox.png");
+        screen.type("karlokorisnik" + Key.ENTER);
+        screen.type(Key.TAB);
+        screen.type("hgrsdrgeshtyjfyjhrtcht" + Key.ENTER);
+        screen.wait("images/btnPrijava.png", 10);
+        screen.click("images/btnPrijava.png");
+
+        screen.wait("images/btnIzbrisi.png", 10);
+        screen.click("images/btnIzbrisi.png");
+        screen.wait("images/mboxOdaberiBrisanje.png", 10);
+
+        screen.wait("images/btnOK.png", 10);
+        screen.click("images/btnOK.png");
+
+        screen.wait("images/btnUredi.png", 10);
+        screen.click("images/btnUredi.png");
+        screen.wait("images/mboxOdaberiUredivanje.png", 10);
+
+        screen.wait("images/btnOK.png", 10);
+        screen.click("images/btnOK.png");
+
+        Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
+    }
+    @Test
+    public void testAddAccountNoInput() throws FindFailed{
+        screen.wait("images/txtBox.png", 10);
+        screen.click("images/txtBox.png");
+        screen.type("karlokorisnik" + Key.ENTER);
+        screen.type(Key.TAB);
+        screen.type("hgrsdrgeshtyjfyjhrtcht" + Key.ENTER);
+        screen.wait("images/btnPrijava.png", 10);
+        screen.click("images/btnPrijava.png");
+
+        screen.wait("images/btnDodaj.png", 10);
+        screen.click("images/btnDodaj.png");
+        screen.wait("images/btnDodajRacun.png", 10);
+        screen.click("images/btnDodajRacun.png");
+
+        Assert.assertNotNull(screen.wait("images/RegNevaljana.png", 15));
     }
     @After
     public void tearDown() {

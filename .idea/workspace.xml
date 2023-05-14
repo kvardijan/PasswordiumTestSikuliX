@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b957e7e5-bf08-4c2b-87bc-0c531b5cba1b" name="Changes" comment="Test za natrag na prijavu i lockout iz racuna">
+    <list default="true" id="b957e7e5-bf08-4c2b-87bc-0c531b5cba1b" name="Changes" comment="Natrag na prikaz test">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PasswordiumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PasswordiumTest.java" afterDir="false" />
     </list>
@@ -36,22 +36,32 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.PasswordiumTest.testNatragNaPrikaz">
-    <configuration name="PasswordiumTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PasswordiumTest.testAddAccountNoInput">
+    <configuration name="PasswordiumTest.testAccountNotSelected" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PasswordiumTestSikuliX" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PasswordiumTest" />
-      <option name="METHOD_NAME" value="testLogin" />
+      <option name="METHOD_NAME" value="testAccountNotSelected" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordiumTest.testLoginLockout" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="PasswordiumTest.testAddAccountNoInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PasswordiumTestSikuliX" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PasswordiumTest" />
-      <option name="METHOD_NAME" value="testLoginLockout" />
+      <option name="METHOD_NAME" value="testAddAccountNoInput" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="PasswordiumTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PasswordiumTestSikuliX" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PasswordiumTest" />
+      <option name="METHOD_NAME" value="testLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -77,23 +87,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordiumTest.testRegistrationNoInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PasswordiumTestSikuliX" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PasswordiumTest" />
-      <option name="METHOD_NAME" value="testRegistrationNoInput" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PasswordiumTest.testAddAccountNoInput" />
+        <item itemvalue="JUnit.PasswordiumTest.testAccountNotSelected" />
         <item itemvalue="JUnit.PasswordiumTest.testNatragNaPrikaz" />
         <item itemvalue="JUnit.PasswordiumTest.testLogin" />
         <item itemvalue="JUnit.PasswordiumTest.testNatragNaPrijavu" />
-        <item itemvalue="JUnit.PasswordiumTest.testRegistrationNoInput" />
-        <item itemvalue="JUnit.PasswordiumTest.testLoginLockout" />
       </list>
     </recent_temporary>
   </component>
@@ -136,7 +136,13 @@
       <option name="presentableId" value="LOCAL−00005" />
       <updated>1684064331402</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL−00006" summary="Natrag na prikaz test">
+      <created>1684065460636</created>
+      <option name="number" value="LOCAL−00006" />
+      <option name="presentableId" value="LOCAL−00006" />
+      <updated>1684065460636</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -156,6 +162,7 @@
     <MESSAGE value="Test za registraciju slabom lozinkom." />
     <MESSAGE value="Test lockout racuna" />
     <MESSAGE value="Test za natrag na prijavu i lockout iz racuna" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test za natrag na prijavu i lockout iz racuna" />
+    <MESSAGE value="Natrag na prikaz test" />
+    <option name="LAST_COMMIT_MESSAGE" value="Natrag na prikaz test" />
   </component>
 </project>
