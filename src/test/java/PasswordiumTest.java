@@ -30,16 +30,6 @@ public class PasswordiumTest {
     @Test
     public void testPasswordiumOpen(){
         assertTrue(screen.exists("images/prijava_screen.png") != null);
-        try {
-            screen.wait("images/btnZatvori.png", 10);
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            screen.click("images/btnZatvori.png");
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Test
@@ -52,16 +42,6 @@ public class PasswordiumTest {
         screen.wait("images/btnPrijava.png", 10);
         screen.click("images/btnPrijava.png");
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
-        try {
-            screen.wait("images/btnZatvori.png", 10);
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            screen.click("images/btnZatvori.png");
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Test
@@ -93,16 +73,6 @@ public class PasswordiumTest {
         screen.click("images/btnOK.png");
 
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
-        try {
-            screen.wait("images/btnZatvori.png", 10);
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            screen.click("images/btnZatvori.png");
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
     }
 
 
@@ -148,16 +118,6 @@ public class PasswordiumTest {
         screen.click("images/btnOK.png");
 
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
-        try {
-            screen.wait("images/btnZatvori.png", 10);
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            screen.click("images/btnZatvori.png");
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Test
@@ -192,16 +152,6 @@ public class PasswordiumTest {
         screen.click("images/btnIzbrisi.png");
 
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
-        try {
-            screen.wait("images/btnZatvori.png", 10);
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            screen.click("images/btnZatvori.png");
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
     }
 
     @Test
@@ -224,18 +174,9 @@ public class PasswordiumTest {
         screen.wait("images/btnOK.png", 10);
         screen.click("images/btnOK.png");
         Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
-        try {
-            screen.wait("images/btnZatvori.png", 10);
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
-        try {
-            screen.click("images/btnZatvori.png");
-        } catch (FindFailed e) {
-            throw new RuntimeException(e);
-        }
     }
 
+    @After
     public void tearDown() {
         System.out.println("teardown");
 
