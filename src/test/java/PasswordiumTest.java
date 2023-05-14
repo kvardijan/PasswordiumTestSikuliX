@@ -176,6 +176,41 @@ public class PasswordiumTest {
         Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
     }
 
+    @Test
+    public void testRegistrationWeakPassword() throws FindFailed {
+        screen.wait("images/txtNisteReg.png", 10);
+        screen.click("images/txtNisteReg.png");
+
+        screen.wait("images/txtBox.png", 10);
+        screen.click("images/txtBox.png");
+        screen.type("slabi korisnik");
+        screen.type(Key.TAB);
+        screen.type("12345");
+        screen.type(Key.TAB);
+        screen.type("12345");
+
+        screen.wait("images/Reg3.png", 20);
+        screen.click("images/Reg3.png");
+
+        screen.wait("images/slabaLozinka.png", 10);
+
+        screen.wait("images/btnOK.png", 10);
+        screen.click("images/btnOK.png");
+
+        try {
+            screen.wait("images/btnZatvori.png", 10);
+        } catch (FindFailed e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            screen.click("images/btnZatvori.png");
+        } catch (FindFailed e) {
+            throw new RuntimeException(e);
+        }
+
+        Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
+    }
+
     @After
     public void tearDown() {
         System.out.println("teardown");
