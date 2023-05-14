@@ -242,6 +242,38 @@ public class PasswordiumTest {
 
         Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
     }
+    @Test
+    public void testRegistrationNoInput() throws FindFailed {
+        screen.wait("images/txtNisteReg.png", 10);
+        screen.click("images/txtNisteReg.png");
+
+        screen.wait("images/Reg3.png", 10);
+        screen.click("images/Reg3.png");
+
+        boolean postoji = false;
+        postoji = screen.wait("images/RegNevaljana.png", 15) != null;
+        try {
+            screen.wait("images/btnZatvori.png", 10);
+        } catch (FindFailed e) {
+            throw new RuntimeException(e);
+        }
+        try {
+            screen.click("images/btnZatvori.png");
+        } catch (FindFailed e) {
+            throw new RuntimeException(e);
+        }
+        Assert.assertTrue(postoji);
+    }
+    @Test
+    public void testNatragNaPrijavu() throws FindFailed{
+        screen.wait("images/txtNisteReg.png", 10);
+        screen.click("images/txtNisteReg.png");
+        Pattern natrag = new Pattern("images/btnNatragNaPrijavu.png");
+        natrag.similar(0.65);
+        screen.wait(natrag, 20);
+        screen.click(natrag);
+        Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
+    }
     @After
     public void tearDown() {
         System.out.println("teardown");
