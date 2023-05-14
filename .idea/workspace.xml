@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="b957e7e5-bf08-4c2b-87bc-0c531b5cba1b" name="Changes" comment="Test lockout racuna">
+    <list default="true" id="b957e7e5-bf08-4c2b-87bc-0c531b5cba1b" name="Changes" comment="Test za natrag na prijavu i lockout iz racuna">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/PasswordiumTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/PasswordiumTest.java" afterDir="false" />
     </list>
@@ -36,12 +36,12 @@
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;
   }
 }</component>
-  <component name="RunManager" selected="JUnit.PasswordiumTest.testNatragNaPrijavu">
-    <configuration name="PasswordiumTest.testLoginFailed" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+  <component name="RunManager" selected="JUnit.PasswordiumTest.testNatragNaPrikaz">
+    <configuration name="PasswordiumTest.testLogin" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PasswordiumTestSikuliX" />
       <option name="PACKAGE_NAME" value="" />
       <option name="MAIN_CLASS_NAME" value="PasswordiumTest" />
-      <option name="METHOD_NAME" value="testLoginFailed" />
+      <option name="METHOD_NAME" value="testLogin" />
       <option name="TEST_OBJECT" value="method" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -67,6 +67,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="PasswordiumTest.testNatragNaPrikaz" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="PasswordiumTestSikuliX" />
+      <option name="PACKAGE_NAME" value="" />
+      <option name="MAIN_CLASS_NAME" value="PasswordiumTest" />
+      <option name="METHOD_NAME" value="testNatragNaPrikaz" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="PasswordiumTest.testRegistrationNoInput" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="PasswordiumTestSikuliX" />
       <option name="PACKAGE_NAME" value="" />
@@ -77,23 +87,13 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="PasswordiumTest.testRegistrationWeakPassword" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="PasswordiumTestSikuliX" />
-      <option name="PACKAGE_NAME" value="" />
-      <option name="MAIN_CLASS_NAME" value="PasswordiumTest" />
-      <option name="METHOD_NAME" value="testRegistrationWeakPassword" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.PasswordiumTest.testNatragNaPrikaz" />
+        <item itemvalue="JUnit.PasswordiumTest.testLogin" />
         <item itemvalue="JUnit.PasswordiumTest.testNatragNaPrijavu" />
         <item itemvalue="JUnit.PasswordiumTest.testRegistrationNoInput" />
         <item itemvalue="JUnit.PasswordiumTest.testLoginLockout" />
-        <item itemvalue="JUnit.PasswordiumTest.testLoginFailed" />
-        <item itemvalue="JUnit.PasswordiumTest.testRegistrationWeakPassword" />
       </list>
     </recent_temporary>
   </component>
@@ -130,7 +130,13 @@
       <option name="presentableId" value="LOCAL−00004" />
       <updated>1684062500110</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL−00005" summary="Test za natrag na prijavu i lockout iz racuna">
+      <created>1684064331402</created>
+      <option name="number" value="LOCAL−00005" />
+      <option name="presentableId" value="LOCAL−00005" />
+      <updated>1684064331402</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
@@ -149,6 +155,7 @@
     <MESSAGE value="Implementirana funkcija tearDown koja se dogada poslje svakog testa za zatvaranje aplikacije." />
     <MESSAGE value="Test za registraciju slabom lozinkom." />
     <MESSAGE value="Test lockout racuna" />
-    <option name="LAST_COMMIT_MESSAGE" value="Test lockout racuna" />
+    <MESSAGE value="Test za natrag na prijavu i lockout iz racuna" />
+    <option name="LAST_COMMIT_MESSAGE" value="Test za natrag na prijavu i lockout iz racuna" />
   </component>
 </project>

@@ -274,6 +274,21 @@ public class PasswordiumTest {
         screen.click(natrag);
         Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
     }
+    @Test
+    public void testNatragNaPrikaz() throws FindFailed{
+        screen.wait("images/txtBox.png", 10);
+        screen.click("images/txtBox.png");
+        screen.type("karlokorisnik" + Key.ENTER);
+        screen.type(Key.TAB);
+        screen.type("hgrsdrgeshtyjfyjhrtcht" + Key.ENTER);
+        screen.wait("images/btnPrijava.png", 10);
+        screen.click("images/btnPrijava.png");
+        screen.wait("images/btnDodaj.png", 10);
+        screen.click("images/btnDodaj.png");
+        screen.wait("images/NatragNaPrikaz.png", 10);
+        screen.click("images/NatragNaPrikaz.png");
+        Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
+    }
     @After
     public void tearDown() {
         System.out.println("teardown");
