@@ -26,12 +26,10 @@ public class PasswordiumTest {
         ImagePath.add(System.getProperty("user.dir"));
         region = new Region(screen.getBounds());
     }
-
     @Test
     public void testPasswordiumOpen(){
         assertTrue(screen.exists("images/prijava_screen.png") != null);
     }
-
     @Test
     public void testLogin() throws FindFailed {
         screen.wait("images/txtBox.png", 10);
@@ -43,7 +41,46 @@ public class PasswordiumTest {
         screen.click("images/btnPrijava.png");
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
     }
+    @Test
+    public void testLoginFailed() throws FindFailed{
+        screen.wait("images/txtBox.png", 10);
+        screen.click("images/txtBox.png");
+        screen.type("nepostojani korisnik" + Key.ENTER);
+        screen.type(Key.TAB);
+        screen.type("12345" + Key.ENTER);
+        screen.wait("images/btnPrijava.png", 10);
+        screen.click("images/btnPrijava.png");
 
+        screen.wait("images/nemaKorisnika.png", 10);
+        screen.wait("images/btnOK.png", 10);
+        screen.click("images/btnOK.png");
+        Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
+    }
+    @Test
+    public void testLoginLockout() throws FindFailed{
+        screen.wait("images/txtBox.png", 10);
+        screen.click("images/txtBox.png");
+        screen.type("karlokorisnik" + Key.ENTER);
+        screen.type(Key.TAB);
+        screen.type("krivalozinka");
+
+        screen.wait("images/btnPrijava.png", 10);
+        screen.click("images/btnPrijava.png");
+        screen.wait("images/btnOK.png", 10);
+        screen.click("images/btnOK.png");
+        screen.wait("images/btnPrijava.png", 10);
+        screen.click("images/btnPrijava.png");
+        screen.wait("images/btnOK.png", 10);
+        screen.click("images/btnOK.png");
+        screen.wait("images/btnPrijava.png", 10);
+        screen.click("images/btnPrijava.png");
+        boolean postoji = false;
+        postoji = screen.wait("images/lockoutDialog.png", 10) != null;
+        screen.wait("images/btnOK.png", 10);
+        screen.click("images/btnOK.png");
+
+        Assert.assertTrue(postoji);
+    }
     @Test
     public void testAddAccount() throws FindFailed {
         screen.wait("images/txtBox.png", 10);
@@ -74,8 +111,6 @@ public class PasswordiumTest {
 
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
     }
-
-
     @Test
     public void testEditAccount() throws FindFailed {
         screen.wait("images/txtBox.png", 10);
@@ -119,7 +154,6 @@ public class PasswordiumTest {
 
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
     }
-
     @Test
     public void testDeleteAccount() throws FindFailed {
         screen.wait("images/txtBox.png", 10);
@@ -153,7 +187,6 @@ public class PasswordiumTest {
 
         Assert.assertNotNull(screen.wait("images/glavniScreen.png", 15));
     }
-
     @Test
     public void testRegistration() throws FindFailed {
         screen.wait("images/txtNisteReg.png", 10);
@@ -175,7 +208,6 @@ public class PasswordiumTest {
         screen.click("images/btnOK.png");
         Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
     }
-
     @Test
     public void testRegistrationWeakPassword() throws FindFailed {
         screen.wait("images/txtNisteReg.png", 10);
@@ -210,7 +242,6 @@ public class PasswordiumTest {
 
         Assert.assertNotNull(screen.wait("images/btnPrijava.png", 15));
     }
-
     @After
     public void tearDown() {
         System.out.println("teardown");
